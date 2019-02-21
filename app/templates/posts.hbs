@@ -1,0 +1,10 @@
+<h1>Posts</h1>
+
+<ul>
+  {{#each model.posts as |post|}}
+  <li>{{#link-to "posts.post" post.id}}{{post.title}}{{/link-to}}</li>
+  {{/each}}
+  <li>{{#link-to "posts.post" 15}}This post does not exist and will cause an error{{/link-to}}</li>
+</ul>
+
+{{outlet}}
